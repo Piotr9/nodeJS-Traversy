@@ -58,6 +58,7 @@ const server = http.createServer((req, res) => {
 
         // Read file
         fs.readFile(filePath, (err, content) => {
+            console.log(filePath);
             if(err) {
                 if(err.code === 'ENOENT') {
                     //Page not found
